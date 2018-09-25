@@ -1,0 +1,154 @@
+//Javascript
+
+var canvas;
+var context;
+var isBlack = true;  //True if it is black's turn
+					 //False if it is white's turn
+var isEnd = false;   //Check if this game end or not
+
+var img_b = new Image();  //The picture of black chess
+img_b.src = "b.png";
+var img_w = new Image();  //The picture of white chess
+img_w.src = "w.png";
+
+var chessData = new Array(20);  //Use 2D array to store the information of the chess board
+								//0 if no chess is on it
+								//1 if black chess is on it
+								//2 is white chess is on it
+for (var x = 0; x < 20; x++){
+	chessData[x] = new Array(20);
+	for(var y = 0; y < 20; y++){
+		chessData[x][y] = 0;
+	}
+}
+
+//initialize the board
+function drawBoard(){
+	canvas = document.getElementById("canvas");
+	context = canvas.getContext("2d");
+	//draw lines
+	for (var i = 0; i <= 800; i += 40){
+		context.beginPath();
+		context.moveTo(0, i);
+		context.lineTo(800, i);
+		context.closePath()；
+		context.stroke();
+		
+		context.beginPath();
+		context.moveTo(i, 0);
+		context.lineTo(i, 800);
+		context.closePath();
+		context.stroke();
+	}
+}	
+
+//mouse on-click
+function action(a){
+	var x = parseInt((a.clientX - 20) / 40)；  //Calculate the clicked area. 
+	var y = parseInt((a.clientY - 20) / 40);  //If it clicks(65, 65), then it is (1, 1);
+	//check whether the game ends or not
+	if (isEnd == true){
+		alert("Game ends. Please refrash the page to play again.");
+		return;
+	}
+	//check whether the place is valid or not
+	if (chessData[x][y] != 0){
+		alert("This palce has been occupied. Please choose another place");
+		return;
+	}
+	if (isBlack){
+		isBlack = false;
+		drawChess(1, x, y);
+	}
+	else {
+		isBlack= true;
+		drawChess(2, x, y);
+	}
+}
+
+//Draw Chess
+function drawChess(chess, x, y){
+	if (x >= 0 && x <20 && y >= 0 && y < 20){
+		if (chess == 1) {
+			context.drawImage(img_b, x * 40 + 20, y * 40 + 20);  //draw black chess
+			chessData[x][y] = 1;
+			judge(x, y, chess);
+		}
+		else {
+			context.drawImage(img_w, x * 40 + 20, y * 40 + 20);  //draw white chess
+			chessData[x][y] = 2;
+			judge(x, y, chess);
+        }
+	}
+}
+
+//check win
+function judge(x, y, chess) {
+	var count1 = 0;
+	var count2 = 0;
+	var count3 = 0;
+	var count4 = 0;
+
+	//left and right
+	for (var i = x; i >= 0; i--) {
+		if (chessData[i][y] != chess) {
+			break;
+		}
+		count1++;
+	}
+	for (var i = x + 1; i < 20; i++) {
+		if (chessData[i][y] != chess) {
+			break;
+		}
+		count1++;
+	}
+	//top and down
+	for (var i = y; i >= 0; i--) {
+		if (chessData[x][i] != chess) {
+			break;
+		}
+		count2++;
+	}
+	for (var i = y + 1; i < 20; i++) {
+		if (chessData[x][i] != chess) {
+			break;
+		}
+		count2++;
+	}
+	//left top to right down
+	for (var i = x, j = y; i >= 0, j >= 0; i--, j--) {
+		if (chessData[i][j] != chess) {
+			break;
+		}
+		count3++;
+	}
+	for (var i = x + 1, j = y + 1; i < 20, j < 20; i++, j++) {
+		if (chessData[i][j] != chess) {
+			break;
+		}
+		count3++;
+	}
+	//right top to left down
+	for (var i = x, j = y; i >= 0, j < 20; i--, j++) {
+		if (chessData[i][j] != chess) {
+			break;
+		}
+		count4++;
+	}
+	for (var i = x + 1, j = y - 1; i < 20, j >= 0; i++, j--) {
+		if (chessData[i][j] != chess) {
+			break;
+		}
+		count4++;
+	}
+
+	if (count1 >= 5 || count2 >= 5 || count3 >= 5 || count4 >= 5) {
+		if (chess == 1) {
+			alert("black wins!");
+		}
+		else {
+			alert("white wins!");
+		}
+		isEnd = true;
+	}
+}
