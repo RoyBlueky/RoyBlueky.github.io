@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>LOL Guessing Game</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+
+	<!-- Font Awesome -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="Players.js"></script>
+    <script type="text/javascript" src="chooseChamp.js"></script>
+
+<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/window.js"></script>
+	<script type="text/javascript" src="js/mouse_hover_image.js"></script>
+-->
+
+</head>
+
+<body>
+    <div class="playersBg">
+        <div class="playersContainer">
+            <div class="topBar">
+                <img style="width: 500px; height: 70px;" src="topBar.png">
+                <div class="flex-container-row-topPlayerIcon">
+                    <img src="topPlayerIconSelected.png">
+                    <img src="topPlayerIcon.png">
+                    <img src="topPlayerIcon.png">
+                    <img src="topPlayerIcon.png">
+                </div>
+            </div>
+            
+            <div class="playerList">
+                <div class="selfIcon"> 
+                    <img height="90px" width="160px" src="playerBorder.png">
+                    <p>100</p>
+                </div>
+                <div class="otherIcon1">
+                   
+                    <div class="playNameBg">
+                        <img height="50px" width="190px" src="playerNameBg.png" >
+                        <p>AzerothSavior<br>Guess: 3</p>
+                    </div>
+                     <div class="smallIcon">
+                        <img height="70px" width="100px" src="playerBorderSmall.png">
+                        <p>100</p>
+                    </div>
+                </div>
+                <div class="otherIcon2">
+                    
+                    <div class="playNameBg">
+                        <img height="50px" width="190px" src="playerNameBg.png" >
+                        <p>AzerothSavior<br>Guess: 3</p>
+                    </div>
+                    <div class="smallIcon">
+                        <img height="70px" width="100px" src="playerBorderSmall.png">
+                    </div>
+                </div>
+                <div class="otherIcon3">
+                   
+                    <div class="playNameBg">
+                        <img height="50px" width="190px" src="playerNameBg.png" >
+                        <p>AzerothSavior<br>Guess: 3</p>
+                    </div>
+                     <div class="smallIcon">
+                        <img height="70px" width="100px" src="playerBorderSmall.png">
+                    </div>
+                </div>
+                <div class="otherIcon4">
+                    
+                    <div class="playNameBg">
+                        <img height="50px" width="190px" src="playerNameBg.png" >
+                        <p>AzerothSavior<br>Guess: 3</p>
+                    </div>
+                    <div class="smallIcon">
+                        <img height="70px" width="100px" src="playerBorderSmall.png">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="questionsBar">
+                <div class="collapseBtn">
+                    <img height="20px" width="74px" src="arrowDown.png">
+                </div>
+                <div class="expandBtn">
+                    <img height="20px" width="74px" src="arrowUp.png">
+                </div>
+            </div>
+            
+            <div class="bottomBar">
+                <img height="130px" width="810px" src="bottomBar.png">
+                <p>Question asked: 3<br>Guesses left: 3</p>
+            </div>
+            <div class="playerChampionListContainer">
+                <div class="collapseBtn">
+                    <img height="20px" width="74px" src="arrowDown.png">
+                </div>
+                <div class="expandBtn">
+                    <img height="20px" width="74px" src="arrowUp.png">
+                </div> 
+                <div class="flex-container-row">
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>    
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                    <div>
+                        <img id="champIcon" src="Rengar.png" onmouseover="champIconHover(this)" onmouseout="champIcon(this)" onmousedown="champIconClick(this)">
+                        <p>Rengar</p>
+                        <img id="champIconCrossBtn" src="startGameCrossBtn.png" onmouseover="champIconCrossBtnHover(this)" onmouseout="champIconCrossBtnOut(this)" onmousedown="champIconCrossBtnClick(this)"
+                        onmouseup="champIconCrossBtnUp(this)">
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="playBoard" class="playBoardOtherContainer">
+                <img height="450px" width="700px;"src="playBoardBg.png">
+                <p id="playerName">AzerothSavior</p>
+                <p id="action">is asking a question...</p>
+                <p id="question">Is this champion a female?</p>
+                <img id="hostResponse" height="100px" width="110px" src="greenCheckMarkWithoutBorder.png">
+            </div>
+
+
+            <div id="playBoard" class="playBoardSelfContainer">
+                <img height="450px" width="700px;"src="playBoardBg.png">
+                <p id="chooseAction">Please choose your action for this round:</p>
+                <img class="askBtn" src="askBtn.png" onmouseover="askBtnHover(this)" onmouseout="askBtnOut(this)" onmousedown="askBtnClick(this)" onmouseup="askBtnHover(this)">
+                <img class="guessBtn" src="guessBtn.png" onmouseover="guessBtnHover(this)" onmouseout="guessBtnOut(this)" onmousedown="guessBtnClick(this)" onmouseup="guessBtnHover(this)">
+            </div>
+
+
+            <div id="playBoard" class="playBoardAskContainer">
+                <img height="450px" width="700px;"src="playBoardBg.png">
+                <form>
+                    <p>Please type your question:</p>
+                    <input type="text" id="question" placeholder="Type your question here...">
+                    <img src="sendBtn.png">
+                </form>
+            </div>
+
+            <div id="playBoard" class="playBoardGuessContainer">
+                <img height="450px" width="700px;"src="playBoardBg.png">
+                <form>
+                    <p>Please type the name of the champion:</p>
+                    <input type="text" id="question" placeholder="Type your question here...">
+                    <img src="sendBtn.png">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

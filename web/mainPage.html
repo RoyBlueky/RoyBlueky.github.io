@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>LOL Guessing Game</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+
+	<!-- Font Awesome -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="mainPage.js"></script>
+
+<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/window.js"></script>
+	<script type="text/javascript" src="js/mouse_hover_image.js"></script>
+-->
+
+
+	</head>
+
+<body>
+    <div class="mainPageBg">
+        <div class="loginBg">
+            <div class="container">
+
+                <img class="createGameBtn" src="createGameBtn.png" alt="Create Game" onmouseover="createGameBtnHover(this)" onmouseout="createGameBtn(this)" onmousedown="createGameBtnClick(this)" onmouseup="createGameBtn(this)" onclick="showCopyLink()">
+                
+                <img class="joinGameBtn" src="joinGameBtn.png" alt="Join Game" onmouseover="joinGameBtnHover(this)" onmouseout="joinGameBtn(this)" onmousedown="joinGameBtnClick(this)" onmouseup="joinGameBtn(this)" onclick="showEnterLink()">
+
+
+
+                <div id="copyLink" class="copyLink">
+                    <div class="close" onclick="crossCopyLink()"></div>
+                    <p>Copy this link:</p>
+                    <form>
+                        <input type="url" value="https://na.leagueoflegends.com/">
+                    </form>
+                    <button onclick="myFunction()">
+                        <p>Copy</p>
+                    </button>
+                </div>
+                
+                <div id="enterLink" class="copyLink">
+                    <div class="close" onclick="crossEnterLink()"></div>
+                    <p>Enter the link:</p>
+                    <form>
+                        <input type="url">
+                    </form>
+                    <button onclick="myFunction()">
+                        <p>Enter</p>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,805 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* -----Main Page-----*/
+
+.mainPageBg{
+    height: 100%;
+    margin: 0;
+    background-image: url("mainPageBg.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.loginBg {
+    /* The image used */
+    background-image: url("createGameBg.jpg");
+    
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container .createGameBtn {
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 200px;
+    height: 50px;
+    left:50%;
+    top:60%;
+    margin-left:-100px;
+}
+
+/*
+.container .createGameBtnHover {
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 200px;
+    height: 50px;
+    left:50%;
+    top:60%;
+    margin-left:-100px;
+    margin-top:-25px;
+}
+
+.container .createGameBtnClick {
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 200px;
+    height: 50px;
+    left:50%;
+    top:60%;
+    margin-left:-100px;
+    margin-top:-25px;
+}
+.container .createGameBtn:hover {
+    display: none;
+}
+
+.container .createGameBtnHover:active {
+    display: none;
+}
+*/
+
+/* Make the image responsive */
+.container .joinGameBtn { 
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 200px;
+    height: 50px;
+    left:50%;
+    top:70%;
+    margin-left:-100px;
+}
+
+/*
+.container .joinGameBtnHover {
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 200px;
+    height: 50px;
+    left:50%;
+    top:70%;
+    margin-left:-100px;
+    margin-top:-25px;
+}
+
+.container .joinGameBtnClick {
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 200px;
+    height: 50px;
+    left:50%;
+    top:70%;
+    margin-left:-100px;
+    margin-top:-25px;
+}
+
+.container .joinGameBtn:hover {
+    display: none;
+}
+
+.container .joinGameBtnHover:active {
+    display: none;
+}
+*/
+
+.container .copyLink{
+    display:none;
+    background: -webkit-linear-gradient(top, #124172, #102d50, #0f182e);
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 200px;
+    margin-left:-175px;
+    margin-top:-100px;
+}
+
+.copyLink .close {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 0px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #000;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+.copyLink p{
+    color: white; 
+    font-family: "Calibri"; 
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.copyLink input{
+    width: 200px;
+    display:block;
+    margin: auto;
+}
+
+.copyLink button{
+    width: 80px;
+    height: 30px;
+    margin-top: 5%;
+    background: -webkit-linear-gradient(top, #feb328, #fdb128, #ee912e);
+    border: none;
+    border-radius: 5px;
+}
+
+.copyLink button p{
+    color: black; 
+    font-family: "calibrib"; 
+    font-size: 20px;
+    margin-top: -5%;
+}
+
+.copyLink button:hover{
+   background: -webkit-linear-gradient(top, #fecc4c, #fcbe52, #fcb855);
+}
+
+.copyLink button:active{
+   background: -webkit-linear-gradient(top, #c9791c, #d27527, #da7133);
+}
+
+
+/* -----Invite Players Page-----*/
+
+.invitePlayersBg{
+    height: 100%;
+    margin: 0;
+    background-image: url("invitePlayersDraft2.png");
+    /* Full height */
+    height: 100%; 
+    text-align: center;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.inviteBtnsContainer{
+    position:relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.inviteBtnsContainer .inviteBtnBg2{
+    display: inline;
+    margin: auto;
+    position: absolute;
+    width: 300px;
+    height: 175px;
+    left:50%;
+    margin-top:15%;
+    margin-left:-150px;
+}
+
+.inviteBtnsContainer .inviteBtnBg1{
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 300px;
+    height: 175px;
+    margin-top:15%;
+    left:0;
+}
+
+.inviteBtnsContainer .inviteBtnBg3{
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 300px;
+    height: 175px;
+    margin-top:15%;
+    right:0;
+}
+.inviteBtnsContainer .inviteBtnBg4{
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 300px;
+    height: 175px;
+    margin-top:35%;
+    left:17%;
+}
+.inviteBtnsContainer .inviteBtnBg5{
+    display: inline;
+    margin: auto;
+    position:absolute;
+    width: 300px;
+    height: 175px;
+    margin-top:35%;
+    right:17%;
+}
+
+.inviteBtnsContainer .inviteBtn1{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    margin-top:16%;
+    left:50%;
+    margin-left:-48.5px;
+}
+.inviteBtnsContainer .inviteBtn2{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    margin-top:16%;
+    left:50%;
+    margin-left:-48.5px;
+}
+
+.inviteBtnsContainer .inviteBtn3{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    margin-top:16%;
+    left:50%;
+    margin-left:-48.5px;
+}
+
+.inviteBtnsContainer .inviteBtn4{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    margin-top:16%;
+    left:50%;
+    margin-left:-48.5px;
+}
+
+.inviteBtnsContainer .inviteBtn5{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    margin-top:16%;
+    left:50%;
+    margin-left:-48.5px;
+}
+
+.inviteBtnsContainer .startGameBorder{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    bottom:10%;
+    left:50%;
+    margin-left:-155px;
+}
+
+.inviteBtnsContainer .startGameBtn{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    bottom:10.5%;
+    left:50%;
+    margin-left:-100px;
+}
+
+.inviteBtnsContainer .startGameCrossBtn{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    position: absolute;
+    bottom:10.5%;
+    left:50%;
+    margin-left:-145px;
+}
+
+/* -----Choose Champion Page---- */
+
+.chooseChampBg{
+    height: 100%;
+    margin: 0;
+    background-image: url("chooseChampBg.png");
+    text-align: center;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.champListContainer{
+    height: 750px;
+    width: 984px;
+    margin: 0;
+    position:relative;
+    background-image: url("champListBg.png"); 
+    text-align: center;
+    top: 10%;
+    left:50%;
+    margin-left: -492px;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat:no-repeat;
+}
+
+.champListContainer .chooseChampTime{
+    color: white;
+    font-size: 40px;
+    font-family:"Times New Roman";
+    position:relative;
+    top: 6%;
+    text-align: center;
+}
+
+.champListContainer .flex-container-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width:70%;
+    height: 65%;
+    top: 20%;
+    left:50%;
+    margin-left: -35%;
+}
+
+.flex-container-row img{
+    height: 70px;
+    width: 70px;
+    display:block;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.flex-container-row p{
+    height: 20px;
+    width: 70px;
+    color: #dddda6;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.champListContainer .lockinBtn{
+    position:absolute;
+    top:90%;
+    left:50%;
+    margin-left:-113px;
+}
+
+/* -----Players Page-----*/
+
+.playersBg{
+    height: 100%;
+    margin: 0;
+    background-image: url("playerBg.png");
+    text-align: center;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.playersContainer{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position:relative;
+}
+
+.playersContainer .topBar{
+    height: 100px;
+    width: 500px;
+    margin: 0;
+    position:relative;
+    left:50%;
+    margin-left: -250px;
+}
+
+.topBar .flex-container-row-topPlayerIcon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    width:70%;
+    height: 45px;
+    left:50%;
+    margin-left: -35%;
+    margin-top: -22.5px;
+}
+
+.flex-container-row-topPlayerIcon img{
+    height: 45px;
+    width: 45px;
+}
+
+.playersContainer .playerList{
+    height: 600px;
+    width: 200px;
+    margin: 0;
+    position:absolute;
+    left:90%;
+}
+
+.playerList .selfIcon{
+    position: absolute;
+    height: 90px;
+    width: 160px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.selfIcon p{
+    margin-top: -36%;
+    margin-left: -40%;
+    color: white;
+    font-size: 20px;
+}
+
+.playerList .otherIcon1{
+    position: absolute;
+    height: 90px;
+    width: 160px;
+    top:10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.playerList .otherIcon2{
+    position: absolute;
+    height: 90px;
+    width: 160px;
+    top:30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.playerList .otherIcon3{
+    position: absolute;
+    height: 90px;
+    width: 160px;
+    top:50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.playerList .otherIcon4{
+    position: absolute;
+    height: 90px;
+    width: 160px;
+    top:70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.playerList .smallIcon{
+    position: absolute;
+    height: 70px;
+    width: 100px;
+    margin-top:60px;
+    margin-left:60px;
+}
+.smallIcon p{
+    margin-top: -45%;
+    margin-left: -60%;
+    color: white;
+}
+
+.playerList .playNameBg{
+    position: absolute;
+    height: 70px;
+    width: 100px;
+    margin-top:70px;
+    margin-left:-60px;
+}
+.playNameBg p{
+    text-align: center;
+    margin-top: -45%;
+    color: white;
+}
+
+.playersContainer .questionsBar{
+    background: -webkit-linear-gradient(top, #033f4f, #0a2d37, #121c1c);
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 600px;
+    width: 300px;
+    border: 2px solid #8e704c;
+    border-left: 0px;;
+}
+
+.questionsBar .collapseBtn{
+    transform: rotate(90deg);
+    position: absolute;
+    left: 272px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.questionsBar .expandBtn{
+    transform: rotate(90deg);
+    position: absolute;
+    left: -27px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.playersContainer .bottomBar{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-left: -405px;
+}
+
+.bottomBar p{
+    margin-top: -12%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.playerChampionListContainer{
+    height: 600px;
+    width: 810px;
+    margin: 0;
+    position:relative;
+    background: -webkit-linear-gradient(top, #131b1d, #033f50, #131b1d);
+    text-align: center;
+    top: 6.8%;
+    left:50%;
+    margin-left: -405px;
+    border: 3px solid #8e704c;
+}
+
+.playerChampionListContainer .collapseBtn{
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    margin-top: -10px;
+    margin-left:-37px;
+}
+
+.playerChampionListContainer .expandBtn{
+    position: absolute;
+    left: 50%;
+    top: 584px;
+    margin-top: -9px;
+    margin-left:-37px;
+}
+
+.playerChampionListContainer .flex-container-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width:90%;
+    height: 95%;
+    top: 5%;
+    left:50%;
+    margin-left: -45%;
+}
+
+.flex-container-row #champIcon{
+    height: 70px;
+    width: 70px;
+    display:block;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.flex-container-row p{
+    height: 20px;
+    width: 70px;
+    color: #dddda6;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.flex-container-row #champIconCrossBtn{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin-left: 70px;
+    margin-top: -110px;;
+}
+
+.playersContainer .playBoardOtherContainer{
+    position: absolute;
+    top:20%;
+    left:50%;
+    margin-left: -350px;
+
+}
+
+.playBoardOtherContainer #playerName{
+    color: #c9a61c;
+    font-size: 48px;
+    font-family: Calibri;
+    margin-top: -60%;
+}
+
+.playBoardOtherContainer #action{
+    color: #c9a61c;
+    font-size: 30px;
+    font-family: Calibri;
+}
+
+.playBoardOtherContainer #question{
+    color: white;
+    font-size: 40px;
+    font-family: Calibri;
+    margin-top: 10%;
+}
+
+.playBoardOtherContainer #hostResponse{
+   margin-top: 5%;
+}
+
+.playersContainer .playBoardSelfContainer{
+    position: absolute;
+    top:20%;
+    left:50%;
+    margin-left: -350px;
+}
+
+.playBoardSelfContainer #chooseAction{
+    color: #c9a61c;
+    margin-top: -50%;
+    font-size: 30px;
+}
+
+.playBoardSelfContainer .askBtn{
+    height: 44px;
+    width: 230px;
+    position: absolute;
+    margin-top: 20%;
+    left: 50%;
+    margin-left: -250px;
+}
+
+.playBoardSelfContainer .guessBtn{
+    height: 44px;
+    width: 230px;
+    position: absolute;
+    margin-top: 20%;
+    left: 50%;
+    margin-left: 20px;
+}
+
+.playersContainer .playBoardAskContainer{
+    position: absolute;
+    top:20%;
+    left:50%;
+    margin-left: -350px;
+}
+
+.playBoardAskContainer p{
+     color: #c9a61c;
+    margin-top: -50%;
+    font-size: 30px;
+}
+
+.playBoardAskContainer input[type=text], textarea{
+    background-color: #070f0c;
+    height: 40px;
+    width: 400px;
+    border: 2px solid #7b5e29;
+    margin-top: 10%;
+    display: inline;
+}
+
+.playBoardAskContainer input[type=text]:focus, textarea:focus{
+    background: -webkit-linear-gradient(top, #1f2229, #2d2d29, #3a372a);
+    border: 2px solid #c99d40;
+    color: white;
+}
+
+.playBoardAskContainer img{
+    display: inline;
+}
+
+.playersContainer .playBoardGuessContainer{
+    position: absolute;
+    top:20%;
+    left:50%;
+    margin-left: -350px;
+}
+
+.playBoardGuessContainer p{
+     color: #c9a61c;
+    margin-top: -50%;
+    font-size: 30px;
+}
+
+.playBoardGuessContainer input[type=text], textarea{
+    background-color: #070f0c;
+    height: 40px;
+    width: 400px;
+    border: 2px solid #7b5e29;
+    margin-top: 10%;
+    display: inline;
+}
+
+.playBoardGuessContainer input[type=text]:focus, textarea:focus{
+    background: -webkit-linear-gradient(top, #1f2229, #2d2d29, #3a372a);
+    border: 2px solid #c99d40;
+    color: white;
+}
+
+.playBoardGuessContainer img{
+    display: inline;
+}
+
